@@ -45,17 +45,17 @@
 ## Vraag 2: Formule 1, maak een Driver klasse
     ☐ Maak een klasse genaamd Driver met de volgende eigenschappen:
     
-    o long id (id begint met 1_000_001)
+        o long id (id begint met 1_000_001)
     
-    o String firstName
+        o String firstName
     
-    o String lastName
+        o String lastName
     
-    o Ranking ranking -- Ranking is een Enum met de volgende waarden: NOVICE, INTERMEDIATE, ADVANCED, SENNA
+        o Ranking ranking -- Ranking is een Enum met de volgende waarden: NOVICE, INTERMEDIATE, ADVANCED, SENNA
     
-    o int age
+        o int age
     
-    o boolean wonBefore
+        o boolean wonBefore
     
     ☐ Lees het bestand drivers.csv in en creëer hiervan nieuwe objecten en schrijf deze naar de database. Je kunt een van een String een Enum maken middels de Ranking.valueOf() methode.
     
