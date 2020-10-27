@@ -6,6 +6,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.util.Random;
 
 //Issue:
 // Not a managed type: class nl.inholland.oefententamen.TeijeVanHemert.model.Driver
@@ -22,25 +23,25 @@ import javax.persistence.*;
 @Getter
 @Setter
 @ToString
-public class Driver
+public class Car
 {
     @Id
-    @SequenceGenerator(name = "driver_seq", initialValue = 1000001, allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "driver_seq")
+    @SequenceGenerator(name = "car_seq", initialValue = 9000001, allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "car_seq")
     private long id;
-    String firstName;
-    String lastName;
-    Ranking ranking;
-    int age;
-    boolean wonBefore;
 
-    public Driver(String firstName, String lastName, Ranking ranking, int age, boolean wonBefore)
+    String brand;
+    int topSpeed;
+
+    @OneToOne
+    private Driver driver;
+
+    public Car(String brand, Driver driver)
     {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.ranking = ranking;
-        this.age = age;
-        this.wonBefore = wonBefore;
+        this.brand = brand;
+        this.topSpeed = new Random().nextInt(50) + 250;;
+        this.driver = driver;
     }
-}
 
+
+}
