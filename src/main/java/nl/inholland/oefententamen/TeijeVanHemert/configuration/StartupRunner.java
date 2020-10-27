@@ -61,6 +61,5 @@ public class StartupRunner implements ApplicationRunner
 
         carRepository.findAll().forEach(System.out::println);
         log.info("--- Exam Question 3 completed ---");
-
     }
 }

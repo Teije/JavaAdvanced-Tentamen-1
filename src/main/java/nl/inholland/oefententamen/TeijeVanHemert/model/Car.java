@@ -42,6 +42,4 @@ public class Car
         this.topSpeed = new Random().nextInt(50) + 250;;
         this.driver = driver;
     }
-
-
 }
