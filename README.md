@@ -1,8 +1,8 @@
 # Examen vragen (elke vraag heeft zijn eigen branch)
 
-[Vraag 1](https://github.com/Teije/JavaAdvanced-Tentamen-1/tree/Assignment1+2): Kickstart een nieuwe Spring Boot Applicatie
+Vraag 1
 
-[Vraag 2](https://github.com/Teije/JavaAdvanced-Tentamen-1/tree/Assignment1+2): Formule 1, maak een Driver klasse
+Vraag 2
 
 [Vraag 3](https://github.com/Teije/JavaAdvanced-Tentamen-1/tree/Assignment3): Formule 1, de Car klasse
 
