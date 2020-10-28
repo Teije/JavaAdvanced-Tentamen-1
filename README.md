@@ -1,23 +1,24 @@
 # Examen vragen (elke vraag heeft zijn eigen branch{
 
-Vraag 1: Kickstart een nieuwe Spring Boot Applicatie
+[Vraag 1](https://github.com/Teije/JavaAdvanced-Tentamen-1/tree/Assignment1+2): Kickstart een nieuwe Spring Boot Applicatie
 
-Vraag 2: Formule 1, maak een Driver klasse
+[Vraag 2](https://github.com/Teije/JavaAdvanced-Tentamen-1/tree/Assignment1+2): Formule 1, maak een Driver klasse
 
-Vraag 3: Formule 1, de Car klasse
+[Vraag 3](https://github.com/Teije/JavaAdvanced-Tentamen-1/tree/Assignment3): Formule 1, de Car klasse
 
-Vraag 4: Beveilig de applicatie met HTTPS
+[Vraag 4](https://github.com/Teije/JavaAdvanced-Tentamen-1/tree/Assignment4): Beveilig de applicatie met HTTPS
 
 Vraag 5: Endpoints
     
-    Vraag 5a: Creëer een endpoint om een specifieke driver op te halen aan de hand van het id
+- [Vraag 5a](https://github.com/Teije/JavaAdvanced-Tentamen-1/tree/Assignment5a): Creëer een endpoint om een specifieke driver op te halen aan de hand van het id
     
-    Vraag 5b: Creëer een endpoint om een lijst met cars op te halen, waarbij je kunt kiezen of deze drivers bevat die wel iets hebben gewonnen of deze drivers bevat die niets hebben gewonnen
+- [Vraag 5b](https://github.com/Teije/JavaAdvanced-Tentamen-1/tree/Assignment5b): Creëer een endpoint om een lijst met cars op te halen, waarbij je kunt kiezen of deze drivers bevat die wel iets hebben gewonnen of deze drivers bevat die niets hebben gewonnen
+    
 Vraag 6: Meer endpoints
     
-    Vraag 6a: Creëer een endpoint waarmee je een nieuwe Car (merk: Mercedes, Driver is Max Vierstappen). Creëer hiervoor ook een klasse CarDTO met de volgende eigenschappen: - String brand - long driverId Gebruik een CarDTO in je request body en geef de nieuwe Car terug in de response body
+- [Vraag 6a](https://github.com/Teije/JavaAdvanced-Tentamen-1/tree/Assignment6a): Creëer een endpoint waarmee je een nieuwe Car (merk: Mercedes, Driver is Max Vierstappen). Creëer hiervoor ook een klasse CarDTO met de volgende eigenschappen: - String brand - long driverId Gebruik een CarDTO in je request body en geef de nieuwe Car terug in de response body
     
-    Vraag 6b: Creëer een endpoint welke de som van de maximumsnelheid van alle cars in de database teruggeeft in een JSON-object met als enige eigenschap: total. Gebruik geen SQL
+- [Vraag 6b](https://github.com/Teije/JavaAdvanced-Tentamen-1/tree/Assignment6b): Creëer een endpoint welke de som van de maximumsnelheid van alle cars in de database teruggeeft in een JSON-object met als enige eigenschap: total. Gebruik geen SQL
     
 ---
 
