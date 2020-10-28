@@ -25,8 +25,8 @@ import javax.persistence.*;
 public class Driver
 {
     @Id
-    @SequenceGenerator(name = "driver_seq", initialValue = 1000001, allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "driver_seq")
+    @SequenceGenerator(name = "driver_seq", initialValue = 1_000_001, allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "guitar_seq")
     private long id;
     String firstName;
     String lastName;

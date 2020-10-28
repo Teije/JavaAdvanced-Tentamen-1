@@ -1,10 +1,8 @@
 package nl.inholland.oefententamen.TeijeVanHemert.configuration;
 
 import lombok.extern.java.Log;
-import nl.inholland.oefententamen.TeijeVanHemert.model.Car;
 import nl.inholland.oefententamen.TeijeVanHemert.model.Driver;
 import nl.inholland.oefententamen.TeijeVanHemert.model.Ranking;
-import nl.inholland.oefententamen.TeijeVanHemert.repository.CarRepository;
 import nl.inholland.oefententamen.TeijeVanHemert.repository.DriverRepository;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -19,12 +17,10 @@ import java.util.List;
 public class StartupRunner implements ApplicationRunner
 {
     private DriverRepository driverRepository;
-    private CarRepository carRepository;
 
-    public StartupRunner(DriverRepository driverRepository, CarRepository carRepository)
+    public StartupRunner(DriverRepository driverRepository)
     {
         this.driverRepository = driverRepository;
-        this.carRepository = carRepository;
     }
 
     @Override
@@ -47,20 +43,5 @@ public class StartupRunner implements ApplicationRunner
 
         driverRepository.findAll().forEach(System.out::println);
         log.info("--- Exam Question 2 completed ---");
-
-
-        List<String> cars = Files.readAllLines(Paths.get("cars.csv"));
-        cars.forEach(
-                car ->
-                        carRepository.save(
-                                new Car(
-                                        car.split(",")[0],
-                                        driverRepository
-                                                .findById(Long.parseLong(car.split(",")[1]))
-                                                .orElseThrow(IllegalArgumentException::new))));
-
-        carRepository.findAll().forEach(System.out::println);
-        log.info("--- Exam Question 3 completed ---");
-
     }
 }
