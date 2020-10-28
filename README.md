@@ -1,4 +1,4 @@
-# Examen vragen (elke vraag heeft zijn eigen branch{
+# Examen vragen (elke vraag heeft zijn eigen branch)
 
 [Vraag 1](https://github.com/Teije/JavaAdvanced-Tentamen-1/tree/Assignment1+2): Kickstart een nieuwe Spring Boot Applicatie
 
