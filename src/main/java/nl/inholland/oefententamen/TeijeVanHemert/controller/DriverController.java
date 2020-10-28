@@ -24,7 +24,7 @@ public class DriverController
     }
 
     // Note Exam Question 5a Endpoint
-    // Endpoint to test: https://localhost:8443/drivers/1000001
+    // Endpoint to validate: https://localhost:8443/drivers/1000001
     @RequestMapping(value = "{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity GetDriverById(@PathVariable long id)
     {

@@ -3,6 +3,7 @@ package nl.inholland.oefententamen.TeijeVanHemert.controller;
 import lombok.extern.java.Log;
 import nl.inholland.oefententamen.TeijeVanHemert.dto.CarDTO;
 import nl.inholland.oefententamen.TeijeVanHemert.dto.GenericErrorResponseDTO;
+import nl.inholland.oefententamen.TeijeVanHemert.dto.TotalDTO;
 import nl.inholland.oefententamen.TeijeVanHemert.model.Car;
 import nl.inholland.oefententamen.TeijeVanHemert.model.Driver;
 import nl.inholland.oefententamen.TeijeVanHemert.service.CarService;
@@ -27,7 +28,7 @@ public class CarController
     }
 
     // Note Exam Question 5b Endpoint
-    // Link to test: https://localhost:8443/cars?hasWon=true
+    // URL to validate: https://localhost:8443/cars?hasWon=true
     @RequestMapping(
             value = "",
             method = RequestMethod.GET,
@@ -78,7 +79,7 @@ public class CarController
             log.info("--- Exam Question 6a completed ---");
             return ResponseEntity
                     .status(HttpStatus.CREATED)
-                    .body(carService.createCar(carDTO));
+                    .body(carService.CreateCar(carDTO));
         }
         //
         catch (Exception exception)
@@ -87,5 +88,21 @@ public class CarController
                     .status(HttpStatus.BAD_REQUEST)
                     .body(new GenericErrorResponseDTO(400, exception.getMessage()));
         }
+    }
+
+    // Note Exam Question 6b Endpoint
+    // URL to validate: https://localhost:8443/cars/total
+    @RequestMapping(
+            value = "/total",
+            method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<TotalDTO> getTotalSpeed()
+    {
+        TotalDTO total = new TotalDTO(carService.GetTotalSpeed());
+        log.info("--- Exam Question 6b completed ---");
+
+        return ResponseEntity
+                .status(200)
+                .body(total);
     }
 }

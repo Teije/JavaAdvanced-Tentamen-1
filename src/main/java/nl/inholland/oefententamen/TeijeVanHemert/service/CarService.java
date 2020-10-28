@@ -26,11 +26,19 @@ public class CarService
         return carRepository.findCarsWithOrWithoutWinners(hasWon);
     }
 
-    public Car createCar(CarDTO carDTO) {
+    public Car CreateCar(CarDTO carDTO) {
         Driver driver = driverRepository
                 .findById(carDTO.getDriverId())
                 .orElseThrow(() -> new EntityNotFoundException("Driver not found"));
         Car car = new Car(carDTO.getBrand(), driver);
         return carRepository.save(car);
+    }
+
+    public int GetTotalSpeed()
+    {
+        List<Car> cars = (List<Car>) carRepository.findAll();
+        return cars.stream()
+                .mapToInt(Car::getTopSpeed)
+                .sum();
     }
 }
